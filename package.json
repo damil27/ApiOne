@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "nodemon ./index.js --exec babel-node"
   },
@@ -20,6 +21,7 @@
     "@babel/cli": "^7.22.15",
     "@babel/core": "^7.22.15",
     "@babel/node": "^7.22.15",
-    "@babel/preset-env": "^7.22.15"
+    "@babel/preset-env": "^7.22.15",
+    "@babel/preset-modules": "^0.1.6"
   }
 }
