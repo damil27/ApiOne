@@ -11,8 +11,8 @@ app.get("/api", (req, res) => {
     current_day: currentDay,
     current_utc_time: currentUTC,
     track: req.query.track,
-    github_file_url: "https://github.com/username/repo/blob/main/file_name.ext",
-    github_repo_url: "https://github.com/username/repo",
+    github_file_url: "https://github.com/damil27/ApiOne/blob/main/index.js",
+    github_repo_url: "https://github.com/damil27/ApiOne",
     status_code: 200,
   });
 });
