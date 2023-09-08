@@ -21,9 +21,15 @@ function getCurrentUTC() {
   const now = new Date();
   // Calculate the current UTC time with +/-2 minutes accuracy
   const currentUTC = new Date(now.getTime() - now.getTimezoneOffset() * 60000);
-  currentUTC.setSeconds(0, 0);
 
-  return currentUTC.toISOString();
+  const year = currentUTC.getUTCFullYear();
+  const month = String(currentUTC.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(currentUTC.getUTCDate()).padStart(2, "0");
+  const hours = String(currentUTC.getUTCHours()).padStart(2, "0");
+  const minutes = String(currentUTC.getUTCMinutes()).padStart(2, "0");
+  const seconds = String(currentUTC.getUTCSeconds()).padStart(2, "0");
+
+  return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}Z`;
 }
 
 app.listen(PORT, () => console.log(`app is running at ${PORT}`));
