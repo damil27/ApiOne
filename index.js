@@ -9,7 +9,7 @@ app.get("/api", (req, res) => {
   return res.json({
     slack_name: req.query.slack_name,
     current_day: currentDay,
-    current_utc_time: currentUTC,
+    utc_time: currentUTC,
     track: req.query.track,
     github_file_url: "https://github.com/damil27/ApiOne/blob/main/index.js",
     github_repo_url: "https://github.com/damil27/ApiOne",
