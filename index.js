@@ -3,7 +3,7 @@ import moment from "moment-timezone";
 
 const app = express();
 const currentDay = moment().tz("UTC").format("dddd");
-const currentUTC = moment.tz("UTC").format("YY-MM-DDTHH:mm:ss[Z]");
+const currentUTC = moment.tz("UTC").format("YYYY-MM-DDTHH:mm:ss[Z]");
 const PORT = 5000;
 app.get("/api", (req, res) => {
   return res.json({
